@@ -1,6 +1,7 @@
 import './App.css';
 import Testimonio from '../src/componentes/testimonio';
 
+//This the main function for react
 function App() {
   return (
 
