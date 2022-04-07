@@ -1,17 +1,22 @@
-import React from 'react';
+import React from "react";
+import "../hojas_de_estilo/Testimonio.css";
 
 //Vamos a definir el componente funcional
-function Testimonio(){
-  return(
-    <div className='contenedor-testimonio'>
-      <img className='imagen-testimonio' 
-           src={require('../imagenes/john-fernando-restrepo-tamayo.jpg')} 
-           alt="Foto de Jhon"/>
-      <div className='contenedor-texto-testimonio'>
-        <p className='nombre-testimonio'>Jhon Fernando UDEA</p>
-        <p className='cargo-testimonio'>Ingeniero de Software UDEA</p>
-        <p className='texto-testimonio'>qzerxtcvubinouibyvuctyrtxrztxtcfgvbhljnbgyfctdxyrsxydtcfgvkhbljn</p>
+function Testimonio(props) {
+  return (
+    <div className="contenedor-testimonio">
+      <img
+        className="imagen-testimonio"
+        src={require(`../imagenes/${props.imagen}.jpg`)}
+        alt="Foto de Jhon"
+      />
+      <div className="contenedor-texto-testimonio">
+        <p className="nombre-testimonio">{props.nombre} en {props.pais}</p>
+        <p className="cargo-testimonio">{props.cargo} en {props.empresa}</p>
+        <p className="texto-testimonio">"{props.testimonio}"</p> 
       </div>
     </div>
   );
 }
+
+export default Testimonio;
